@@ -5,24 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Movie mood</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav></nav>
+
+    <header class="header">
+        <h1 class="title">Movie Mood</h1>
+        <nav> 
+        </nav>
     </header>
+    <main class="main">
     <section class="filter-movie">
-        <h1>Movies</h1>
-        <input class="general-filter" type="text">
-        <a class="btn-mood" id="romantic">Romantic</a>
-        <a class="btn-mood" id="action">Action</a>
-        <a class="btn-mood" id="drama">Drama</a>
-        <a class="btn-mood" id="comedy">Comedy</a>
-        <a class="btn-mood" id="horror">Horror</a>
-        <a class="btn-mood" id="fiction">Fiction</a>
+        <h3>¡Cuáles tu mood hoy!</h3>
+        <input id= "searcher" class="general-filter" type="text" placeholder="Elige tu pelicula favorita">
+        <a id='btn' class="btn-search">buscar</a>
+        <div class="mood">
+            <a href="#results" id="Romance" class="btn-mood romance">Romantico</a>
+            <a href="#results" id="Comedy" class="btn-mood comedy" >Alegre</a>
+        </div>
+        <div class="mood">
+            <a href="#results" id="Adventure" class="btn-mood futurista" >Futurista</a>
+            <a href="#results" id="Horror" class="btn-mood horror" >Valiente</a>
+        </div>
+        <div class="mood">
+            <a href="#results" id="Action" class="btn-mood aventurero" >Aventurero</a>
+            <a href="#results" id="Drama" class="btn-mood drama" >Nostalgico</a>
+        </div>
     </section>
-    <section id= "results"></section>
+    <section id= "results" class="results">
+        </section>
+    </main>
+   
     <script src="main.js"></script>
     <script src="data.js"></script>
 </body>
