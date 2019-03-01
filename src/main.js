@@ -1,7 +1,7 @@
 const buttonTypes = Array.from(document.getElementsByClassName('btn-mood'));
 let titles = ['robocop', 'mean-girls', '10-things-i-hate-about-you',
-'batman','kill-bill', 'it', 'beetlejuice', 'avatar', 'mockingjay', 'the-notebook', 'amelie',
-'blue-valentine', 'pride-and-prejudice', 'love-rosie', 'submarine', 'like-crazy'];
+'batman','kill-bill', 'sleepy-hollow','it', 'beetlejuice', 'avatar', 'mockingjay', 'the-notebook', 'amelie',
+'blue-valentine', 'pride-and-prejudice', 'love-rosie', 'submarine', 'like-crazy','the-nun','the-exorcist','the-exorcism-of-emily-rose','insidious'];
 
 let allMovies = [];
 let resultsMovies = document.getElementById('results');
@@ -45,15 +45,27 @@ for(let i= 0; i< titles.length; i++) {
      console.log(genre)
       let r = window.movies.filterGenre(allMovies , genre);
       resultadoImg (r)
+      
+    })};
+    const clickMovie = document.getElementsByClassName('click-movie');
+    const singularMovie= document.getElementById('singular-movie');
 
-})};
 
 const resultadoImg = (allMovies) => {
  resultsMovies.innerHTML="";
  allMovies.forEach(element => {
-   const arrayProperties= `<div><img src="${element.Poster}"> <p> ${element.Title}${element.Runtime}</p></div>`
+   const arrayProperties= `<div  id="${element.Title}" class='click-movie'><img src="${element.Poster}"> <p> ${element.Title}${element.Runtime}</p></div>`
    resultsMovies.insertAdjacentHTML('beforeend', arrayProperties);
 });
+for(let i=0; i<clickMovie.length; i++){
+    clickMovie[i].addEventListener('click',()=>{
+        resultsMovies.classList.add('hide');
+         singularMovie.classList.remove('hide');
+      const electedMovie=clickMovie[i].id;
+      const oneMovie= window.movies.filterSingularMovie(allMovies,electedMovie);
+      console.log (oneMovie)
+    })
+    }
 }
 
 const printSearchResult = (searchResult) => {
@@ -63,3 +75,4 @@ const printSearchResult = (searchResult) => {
    resultsMovies.insertAdjacentHTML('beforeend', arrayProperties);
 });
 }
+

@@ -9,6 +9,14 @@ window.movies = {
         let filterMovieByName = data.filter(data => data.Title.match(searchValue));
         console.log(filterMovieByName);
         return filterMovieByName;
-        }
+        },
+
+    filterSingularMovie:(data,movieSelected) =>{
+    const filterOneMovie= data.filter(data=> data.Title.includes(movieSelected));
+    console.log(filterOneMovie)
+    return filterOneMovie
+    }
  
  };
+
+ 
