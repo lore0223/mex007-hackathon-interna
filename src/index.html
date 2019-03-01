@@ -2,19 +2,29 @@
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PELICULAS</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body >
-  <section class="fiter_movies">
-    <h1>cine movies</h1>
-    <input type="text" >
-  </section>
-  <script src="main.js"></script>
-  <script src="data.js"></script>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <section class="filter-movie">
+        <h1>Movies</h1>
+        <input class="general-filter" type="text">
+        <a class="btn-mood" id="romantic">Romantic</a>
+        <a class="btn-mood" id="action">Action</a>
+        <a class="btn-mood" id="drama">Drama</a>
+        <a class="btn-mood" id="comedy">Comedy</a>
+        <a class="btn-mood" id="horror">Horror</a>
+        <a class="btn-mood" id="fiction">Fiction</a>
+    </section>
+    <section id= "results"></section>
+    <script src="main.js"></script>
+    <script src="data.js"></script>
 </body>
 
 </html>
