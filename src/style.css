@@ -25,14 +25,14 @@ width: 100%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .title{
-font-size: 1.6rem;
-}
-.main{
-width: 100%;
-margin-top:80px;
-padding: 0 10px;
-
-}
+    font-size: 1.6rem;
+    }
+    .main{
+    width: 100%;
+    margin-top:80px;
+    padding: 0 10px;
+    
+    }
 .filter-movie{
 text-align: center;
 }
@@ -68,7 +68,6 @@ text-align: center;
     padding: .8em 1.4em;
     margin-left: -5px;
     text-transform: uppercase;
-
 }
 .mood{
     display: flex;
@@ -103,10 +102,12 @@ text-align: center;
 .romance{
     background-color: #c42860;
     background-image: url('./images/home/like.svg');
+    background-repeat: no-repeat;
 }
 .comedy{
     background-color: #ffaf13;
     background-image: url('./images/home/happy.svg');
+    background-repeat: no-repeat;
 
 }
 .futurista{
@@ -143,7 +144,6 @@ text-align: center;
     background-color: rgba(156, 156, 156, 0.37);
 } 
 .results div img{
-<<<<<<< HEAD
     background-repeat: no-repeat;
     background-position: center 20px;
     background-size: 45px;
@@ -154,13 +154,59 @@ text-align: center;
     display: none;
 }*/
 
-=======
-    width: 100%;
-    border-radius: 10px;
+nav h1{
+    margin:0;
+    line-height: 80px;
 } 
-.results div p{
-    width: 100%;
-    border-radius: 10px;
-    font-size:1.2rem;
-}  
->>>>>>> upstream/master
+.romantico,
+.Alegre,
+.Futurista,
+.Valiente,
+.Aventurero,
+.Nostalgico{
+    height: 80px;
+}
+.romantico{
+    background: #c42860;
+}
+.Alegre{
+    background: #ffaf13;
+}
+.Futurista{
+    background:#484B8d;
+}
+.Valiente{
+    background:#ce1032;
+}
+.Aventurero{
+    background:#ff6e1d;
+
+}
+.Nostalgico{
+    background:#567b96;
+}
+.hide{
+    display: none;
+}
+
+/* hover en peliculas*/
+#plot {
+    position: absolute;
+    color: white;
+    z-index: -12;
+    width: 71%;
+    font-size: 128%;
+    text-align: center;
+    margin-top: 19%;
+    margin-left: 13%;
+ }
+ #im:hover {
+    opacity: 0.07;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms;
+ }
+
+
